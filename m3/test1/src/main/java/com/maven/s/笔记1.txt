@@ -1,0 +1,38 @@
+JDBC 常用借口
+
+Statement接口
+  用于执行静态SQL语句并返回它所生成结果的对象
+  三种Statement:
+    Statement:
+      -由createStatement创建，用于发送简单的SQL语句（不带参数的）
+    PreparedStatement:
+      -继承自Statement接口，由prepareStatement创建，用于发送含有
+      一个或多个输入参数的sql语句。PreparedStatement对象比
+      Statement对象的效率更高，并且可以防止SQL注入。我们一般都用
+      PreparedStatement。
+    CallableStatement:
+      继承自PreparedStatement.由方法prePareCall,用于调用储存过程
+  常用的Statement方法：
+    ~execute():运行语句，返回是否有结果集。
+    ~executeQuery():运行select语句，返回ResultSet结果集
+    ~executeUpdate():运行inset/update/delete操作，返回更新的行数
+
+
+依序关闭使用对象及连接
+  ResultSet->Statement->Connection
+
+  "INSERT into a (s,c) values(6+"+i+",'i"+i+"') "
+
+事务：一组要么同时执行成功，要么同时执行失败的sql语句，是数据库操作的
+一个执行单元！
+事务的四大特点（ACID）：
+  atomicity(原子性)
+    表示一个事务内的所有操作是一个整体，要么全部成功，要么全部失败；
+  consistency（一致性）
+    表示以恶搞事务内有一个操作失败时，所有的更改过数据都必须回滚到
+    修改前的状态
+  isolation（隔离性）
+    事务查看数据时数据所处的状态，要么是另一并发事务修改它之前的状态
+    要么是另一事务修改它之后的状态，事务不会查看中间状态的数据
+  durability(持久性)
+    持久性事务完成之后，它对于系统的影响是永久性的
