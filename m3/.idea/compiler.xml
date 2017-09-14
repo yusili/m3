@@ -7,11 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="test1" />
+        <module name="xml_tomcat" />
+        <module name="xmltomcat" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="m3" target="1.5" />
       <module name="test1" target="1.5" />
+      <module name="xml_tomcat" target="1.5" />
+      <module name="xmlandtomcat" target="1.5" />
+      <module name="xmltomcat" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,3 +1,6 @@
+获取src目录下的properties格式的配置文件
+  ResourceBundle bundle = ResourceBundle.getBundle("不带后缀名的文件名")；
+  String value = bundle.getString("key");
 JDBC 常用借口
 
 Statement接口

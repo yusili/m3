@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xml_tomcat" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xmltomcat" charset="UTF-8" />
   </component>
 </project>
